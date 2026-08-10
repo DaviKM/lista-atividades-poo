@@ -42,4 +42,18 @@ public class Estudante {
     public String getNome() {
         return nome;
     }
+
+    public static ArrayList<Estudante> aprovados(Estudante[] array){
+            ArrayList<Estudante> aprovados =  new ArrayList<Estudante>();
+            for (Estudante estudante : array){
+                double media_estudante = estudante.calculaMedia();
+                if(media_estudante > 6){
+                    aprovados.add(estudante);
+                }
+            }
+            if(aprovados.isEmpty()){
+                return null;
+            }
+            return aprovados;
+    }
 }
