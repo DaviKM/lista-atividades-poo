@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Estudante {
-        String nome;
-        double[] notas;
+        private String nome;
+        private double[] notas;
 
         public Estudante(String nome) {
             this.nome = nome;
