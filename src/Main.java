@@ -1,10 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Estudante[] e = new Estudante[3];
-        for (int i = 0; i<e.length; i++) {
-            e[i] = new Estudante("Aluno " + i);
-            e[i].insereNotas();
-        }
-        System.out.println(Estudante.aprovados(e));
+        Estudante e = new Estudante("Aluno");
+        double[] peso = {1, 1, 2, 3, 3};
+        e.insereNotas();
+        System.out.println(e.calculaMedia(peso));
     }
 }
