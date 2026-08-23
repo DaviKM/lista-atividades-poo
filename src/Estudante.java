@@ -21,9 +21,17 @@ public class Estudante {
         public double calculaMedia(){
             double total = 0;
             for (double nota : this.notas) {
-                total = total + nota;
+                total += nota;
             }
             return total/this.notas.length;
+        }
+
+        public double calculaMedia(double[] peso){
+            double total = 0;
+            for(int i = 0; i < this.notas.length; i++){
+                total += notas[i] * peso[i] / 10 ;
+            }
+            return total;
         }
 
         public double menorNota(){
